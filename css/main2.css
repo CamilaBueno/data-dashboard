@@ -170,7 +170,8 @@ div.scrollmenu a {
     text-align: center;
     padding: 14px;
     text-decoration: none;
-    margin-left: 165px;
+    margin-left: 175px;
+    margin-right: 135px;
 }
 
 div.scrollmenu a:hover {
@@ -187,6 +188,7 @@ footer {
     list-style: none;
     background-color: #ffe521;
     width: 100%;
+    position: fixed;
     
 }
 
@@ -202,7 +204,6 @@ footer li {
     height: 45px;    
     margin-top: 15px;
    }
-
    #exibe-programadoras{
     display: flex;
     flex-wrap: wrap;
@@ -213,5 +214,7 @@ footer li {
   #exibe-programadoras img {
     margin: 5px;
     padding: 5px;
+    width: 180px;
+    height: 200px;
   
   }

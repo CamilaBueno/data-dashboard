@@ -1,23 +1,35 @@
-/*
- * Funcionalidad de tu producto
- */
+var dropMenu = document.getElementById("drop-menu");
+dropMenu.addEventListener("change", carregaProgramadoras);
 
-// Puedes hacer uso de la base de datos a través de la variable `data`
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+window.onload = carregaMenu();
+
+function carregaMenu() {
+  var nome = document.createElement("option");
+  nome.innerHTML = "Selecione sede";
+  nome.value = "none";
+  dropMenu.appendChild(nome);
+  for (sede in data) {
+    var itemMenu = document.createElement("option");
+    itemMenu.value = sede;
+    itemMenu.innerHTML = sede;
+    dropMenu.appendChild(itemMenu);
+
   }
-  
-  function filterFunction() {
-    var input, filter, ul, li, a, i;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    div = document.getElementById("myDropdown");
-    a = div.getElementsByTagName("a");
-    for (i = 0; i < a.length; i++) {
-      if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-        a[i].style.display = "";
-      } else {
-        a[i].style.display = "none";
-      }
+};
+
+function carregaProgramadoras() {
+  var sede = dropMenu.value;
+  var listaProgramadoras = document.getElementById("exibe-programadoras");
+  listaProgramadoras.innerHTML = "";
+  for (turma in data[sede]) {
+    for (i in data[sede][turma]["students"]) {
+      var img = document.createElement("img");
+      img.src = data[sede][turma]["students"][i]["photo"];
+      listaProgramadoras.appendChild(img);
     }
   }
+};
+
+
+
+

@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+  }
+
+.header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    background-color: #ffe521;
+    width: 100%;
+    height: 90px;
+   
+}
+.lab{
+    width: 200px;
+    height: 100px;
+    float: left;
+    
+}
+#logo{
+    height: 10%;
+    position:relative;
+    margin-right:10px ;
+    
+}
+h2{
+    display: flex;
+    margin-bottom: 15px;
+   justify-content: flex-start;
+    margin-left: 15px;
+    font-size: 30px;
+    margin-top: 30px;
+   
+
+}
+.icone{
+    width: 16px;
+    height: 16px;
+}
+
+
+footer {
+	
+	text-align: center;
+	padding-bottom: 0;
+	margin-bottom: 0;
+    bottom: 0;
+    display: table;
+	margin: 0 auto;
+    list-style: none;
+    background-color: #ffe521;
+    width: 100%;
+    
+}
+
+footer ul li {
+	display: inline-block;
+	
+}
+footer li {
+	text-decoration: none;
+	display: block;
+    border-collapse: separate;
+    width: 65px;
+    height: 45px;    
+    margin-top: 15px;
+   }
