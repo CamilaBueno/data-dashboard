@@ -1,35 +1,21 @@
-var dropMenu = document.getElementById("drop-menu");
-dropMenu.addEventListener("change", carregaProgramadoras);
 
-window.onload = carregaMenu();
-
-function carregaMenu() {
-  var nome = document.createElement("option");
-  nome.innerHTML = "Selecione sede";
-  nome.value = "none";
-  dropMenu.appendChild(nome);
-  for (sede in data) {
-    var itemMenu = document.createElement("option");
-    itemMenu.value = sede;
-    itemMenu.innerHTML = sede;
-    dropMenu.appendChild(itemMenu);
-
+ var total = data.SCL["2016-2"].students.length;
+ console.log(total);
+ function mostraAtiva(){
+  
+  var actives = [];
+  for(var i = 0; i< data.SCL["2016-2"].students.length; i++){
+  actives.push(data.SCL["2016-2"].students[i].active);
+ 
   }
-};
+  return actives;
+}
+ console.log(mostraAtiva());
+ function mostraInativa(total, actives){
+  var inatives = total - actives;
+  return inatives;
+ }
+ console.log(mostraInativa(11,3));
 
-function carregaProgramadoras() {
-  var sede = dropMenu.value;
-  var listaProgramadoras = document.getElementById("exibe-programadoras");
-  listaProgramadoras.innerHTML = "";
-  for (turma in data[sede]) {
-    for (i in data[sede][turma]["students"]) {
-      var img = document.createElement("img");
-      img.src = data[sede][turma]["students"][i]["photo"];
-      listaProgramadoras.appendChild(img);
-    }
-  }
-};
-
-
-
-
+ 
+  
