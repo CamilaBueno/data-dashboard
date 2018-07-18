@@ -218,3 +218,9 @@ footer li {
     height: 150px;
   
   }
+  #bntAdd{
+      background-color: rgb(156, 228, 156);
+  }
+  #bntRemove{
+      background-color: rgb(250, 24, 24);
+  }

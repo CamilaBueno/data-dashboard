@@ -17,6 +17,9 @@
     float: left;
     
 }
+div{
+    display: block;
+}
 #logo{
     height: 10%;
     position:relative;
@@ -58,7 +61,8 @@ footer ul li {
 	
 }
 footer li {
-	text-decoration: none;
+    text-decoration: none;
+    color: black;
 	display: block;
     border-collapse: separate;
     width: 65px;

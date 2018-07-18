@@ -17,5 +17,54 @@
  }
  console.log(mostraInativa(11,3));
 
+ function calculaMedia(){
+  var mediaJedi = [];
+
+  for(var i = 0; i < data.AQP['2016-2'].ratings.length; i++){
+    mediaJedi.push(data.AQP['2016-2'].ratings[i].jedi);
+
+  }
+  var somaJedi = mediaJedi.reduce(function(acumulator, valorAtual){
+    return acumulator + valorAtual;
+  });
+var resultMediaJedi = somaJedi / mediaJedi.length;
+var porcentagenJedi = Math.round(resultMediaJedi * 100)/ 5;
+return porcentagenJedi;
+ }
  
   
+  console.log(calculaMedia());
+
+  function calculaMediaTeachers(){
+    var mediaTeachers = [];
+  
+    for(var i = 0; i < data.AQP['2016-2'].ratings.length; i++){
+      mediaTeachers.push(data.AQP['2016-2'].ratings[i].teacher);
+  
+    }
+    var somaTeachers = mediaTeachers.reduce(function(acumulator, valorAtual){
+      return acumulator + valorAtual;
+    });
+  var resultMediaTeachers = somaTeachers / mediaTeachers.length;
+  var porcentagenTeachers = Math.round(resultMediaTeachers * 100)/ 5;
+  return porcentagenTeachers;
+   }
+   
+    
+    console.log(calculaMediaTeachers());
+    function calculaMediaNps(){
+      var mediaNps = [];
+    
+      for(var i = 0; i < data.AQP['2016-2'].nps.promoters.length; i++){
+        mediaNps.push(data.AQP['2016-2'].nps[i].promoters);
+    
+      }
+      var somaNps = mediaNps.reduce(function(acumulator, valorAtual){
+        return acumulator + valorAtual;
+      });
+    var resultMediaNps = somaNps * 100;
+    var porcentagenNps = Math.round(resultMediaNps * 100)/ 5;
+    return porcentagenNps;
+     }
+     console.log(calculaMediaNps());
+     

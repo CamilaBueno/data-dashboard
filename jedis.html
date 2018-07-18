@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head class="head">
+  <meta charset="utf-8">
+  <title>Data Dashboard</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+   crossorigin="anonymous">
+   <link rel="icon" href="assets/images/iconelaboratoria.jpg" class="icone">
+</head>
+
+<body>
+    <div class="header" >
+    <header id="logo" >
+        
+       
+        <img src="assets/images/logo-laboratoria.svg" alt="" class="lab">
+        <h2>Data Dashboard</h2>
+      </div>
+    </header>
+    <div class="scrollmenu">
+        <a href="geral.html">Geral</a>
+  
+        <a href="alunas.html">Alunas</a>
+        <a href="jedis.html">Professores e Jedis</a>
+        
+      </div>
+      <h2>Média das notas dos Professores e Jedis - Arequipa</h2>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Período', 'Jedis', 'Teachers'],
+          ['2016-2',  4.025,      3.6],
+          ['2017-1',  4.43,      4.16],
+          
+        ]);
+
+        var options = {
+          title: 'Média de Jedis e Professores Arequipa',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chartAqp'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="curve_chartAqp" style="width: 900px; height: 500px"></div>
+  </body>
+    <h2>Média das notas dos Professores e Jedis - Cidade do México</h2>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Período', 'Ativas', 'Inativas'],
+          ['2017-1',  7,     8],
+          ['2017-2',  8,     7],
+          
+        ]);
+       
+        var options = {
+          title: 'Evasão-Cidade do México',
+          vAxis: {title: 'Período',  titleTextStyle: {color: 'red'}}//legenda vertical
+        };
+       
+        var barras = new google.visualization.BarChart(document.getElementById('barrasCdm'));
+        barras.draw(data, options);
+        
+      }
+    </script>
+  </head>
+  <body>
+    <div id="barrasCdm" style="width: 900px; height: 500px;"></div>
+    <div id="linhasCdm" style="width: 900px; height: 500px;"></div>
+  </body>
+
+  <h2>Média das notas dos Professores e Jedis - Lima</h2>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Período', 'Jedis', 'Teachers'],
+          ['2016-2',  4.7,      4.1],
+          ['2017-1',  4.15,     3.8],
+          ['2017-1',  4.5,      4.5],
+          
+        ]);
+
+        var options = {
+          title: 'Média de Jedis e Professores Lima',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chartLm'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="curve_chartLm" style="width: 900px; height: 500px"></div>
+  </body>
+  
+  <h2>Média dos Professores e Jedis - Santiago do Chile</h2>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Período', 'Ativas', 'Inativas'],
+        ['2016-2',  7,     8],
+        ['2017-1',  14,    9],
+        ['2017-2',  26,    33],
+        
+      ]);
+     
+      var options = {
+        title: 'Evasão-Santiago do Chile',
+        vAxis: {title: 'Período',  titleTextStyle: {color: 'red'}}//legenda vertical
+      };
+     
+      var barras = new google.visualization.BarChart(document.getElementById('barrasSdc'));
+      barras.draw(data, options);
+      
+    }
+  </script>
+</head>
+<body>
+  <div id="barrasSdc" style="width: 900px; height: 500px;"></div>
+  <div id="linhasSdc" style="width: 900px; height: 500px;"></div>
+</body>
+  <footer>     
+          <div class="footer">
+             <ul>
+              <li> <a href="https://www.facebook.com/Laboratoriabr/" class="fab fa-facebook-f fa-2x"></a></li>
+              <li><a href="https://www.instagram.com/laboratoriala/" class="fab fa-instagram fa-2x"></a></li>
+              <li><a href="https://twitter.com/Laboratoriala" class="fab fa-twitter fa-2x"></a></li>
+              <li><a href="https://www.linkedin.com/school/laboratoriala/" class="fab fa-linkedin-in fa-2x"></a></li>
+              <li><a href="https://medium.com/laboratoria" class="fab fa-medium fa-2x"></a></li>
+            </ul>
+          </div>    
+      </footer>
+    <script src="./js/data.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+  
+  </html>
