@@ -4,28 +4,26 @@
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
-
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Período', 'Jedis', 'Teachers'],
-          ['2016-2',  4.025,      3.6],
-          ['2017-1',  4.43,      4.16],
-          
-        ]);
-
+          ['Sede', 'NPS'],
+          ['CDM 2017-1/Sprint 1', 83],
+          ['CDM 2017-1/Sprint 2', 54],
+          ['CDM 2017-1/Sprint 3', 68],
+          ['CDM 2017-2/Sprint 1', 79],
+          ['CDM 2017-2/Sprint 2', 94], 
+]);
         var options = {
-          title: 'Média de Jedis e Professores Arequipa',
-          curveType: 'function',
-          legend: { position: 'bottom' }
+          title: 'Nps- Cidade do México'
         };
 
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chartAqpJedi'));
+        var chart = new google.visualization.PieChart(document.getElementById('piechartNpsM'));
 
         chart.draw(data, options);
       }
     </script>
   </head>
   <body>
-    <div id="curve_chartAqpJedi" style="width: 900px; height: 500px"></div>
+    <div id="piechartNpsM" style="width: 700px; height: 400px;"></div>
   </body>
 </html>

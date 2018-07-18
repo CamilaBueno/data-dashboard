@@ -33,7 +33,8 @@
         <p>Laboratória - Sede São Paulo </p>
         <p><button>Editar Informações</button></p>
       </div>
-      <h2>Média das notas dos Professores e Jedis - Arequipa</h2>
+      <h2 class="media">Média das notas dos Professores e Jedis - Arequipa</h2>
+      <div class="mediaJedi">
       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
@@ -53,45 +54,50 @@
           legend: { position: 'bottom' }
         };
 
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chartAqp'));
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chartAqpJedi'));
 
         chart.draw(data, options);
       }
     </script>
-  </head>
+  </div>
   <body>
-    <div id="curve_chartAqp" style="width: 900px; height: 500px"></div>
+    <div id="curve_chartAqpJedi" style="width: 900px; height: 500px"></div>
   </body>
-    <h2>Média das notas dos Professores e Jedis - Cidade do México</h2>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <h2 class="media">Média das notas dos Professores e Jedis - Cidade do México</h2>
+    <div class="mediaJedi">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Período', 'Ativas', 'Inativas'],
-          ['2017-1',  7,     8],
-          ['2017-2',  8,     7],
+          ['Período', 'Jedis', 'Teachers'],
+          ['2016-2',  3.87,      3.8],
+          ['2017-1',  4.45,      4.25],
           
         ]);
-       
+
         var options = {
-          title: 'Evasão-Cidade do México',
-          vAxis: {title: 'Período',  titleTextStyle: {color: 'red'}}//legenda vertical
+          title: 'Média de Jedis e Professores Cidade do México',
+          curveType: 'function',
+          legend: { position: 'bottom' }
         };
-       
-        var barras = new google.visualization.BarChart(document.getElementById('barrasCdm'));
-        barras.draw(data, options);
-        
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chartCdmJedi'));
+
+        chart.draw(data, options);
       }
     </script>
-  </head>
+ 
   <body>
-    <div id="barrasCdm" style="width: 900px; height: 500px;"></div>
-    <div id="linhasCdm" style="width: 900px; height: 500px;"></div>
+    <div id="curve_chartCdmJedi" style="width: 900px; height: 500px"></div>
   </body>
+</div>
 
-  <h2>Média das notas dos Professores e Jedis - Lima</h2>
+
+  <h2 class="media">Média das notas dos Professores e Jedis - Lima</h2>
+  <div class="mediaJedi">
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
@@ -112,45 +118,50 @@
           legend: { position: 'bottom' }
         };
 
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chartLm'));
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chartLmJedi'));
 
         chart.draw(data, options);
       }
     </script>
-  </head>
+
   <body>
-    <div id="curve_chartLm" style="width: 900px; height: 500px"></div>
+    <div id="curve_chartLmJedi" style="width: 900px; height: 500px"></div>
   </body>
-  
-  <h2>Média dos Professores e Jedis - Santiago do Chile</h2>
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+</div>
+  <h2 class="media">Média dos Professores e Jedis - Santiago do Chile</h2>
+  <div class="mediaJedi">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
-    google.load("visualization", "1", {packages:["corechart"]});
-    google.setOnLoadCallback(drawChart);
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
-        ['Período', 'Ativas', 'Inativas'],
-        ['2016-2',  7,     8],
-        ['2017-1',  14,    9],
-        ['2017-2',  26,    33],
+        ['Período', 'Jedis', 'Teachers'],
+        ['2016-2',  4.3,     4.1],
+        ['2017-1',  4.4,     4.46],
+        ['2017-1',  4.6,     3.95],
         
       ]);
-     
+
       var options = {
-        title: 'Evasão-Santiago do Chile',
-        vAxis: {title: 'Período',  titleTextStyle: {color: 'red'}}//legenda vertical
+        title: 'Média de Jedis e Professores Santiago do Chile',
+        curveType: 'function',
+        legend: { position: 'bottom' }
       };
-     
-      var barras = new google.visualization.BarChart(document.getElementById('barrasSdc'));
-      barras.draw(data, options);
-      
+
+      var chart = new google.visualization.LineChart(document.getElementById('curve_chartSdcJedi'));
+
+      chart.draw(data, options);
     }
   </script>
-</head>
+</div>
 <body>
-  <div id="barrasSdc" style="width: 900px; height: 500px;"></div>
-  <div id="linhasSdc" style="width: 900px; height: 500px;"></div>
+  <div id="curve_chartSdcJedi" style="width: 900px; height: 500px"></div>
 </body>
+      
+  
+
   <footer>     
           <div class="footer">
              <ul>

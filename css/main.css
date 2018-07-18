@@ -37,6 +37,52 @@ h2{
    
 
 }
+.media{
+    display: flex;
+    margin-bottom: 5px;
+   justify-content: center;
+    margin-left: 5px;
+    font-size: 30px;
+    align-content: center;
+    margin-top: 5px;
+   
+}
+#barrasAqpEvasao{
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+}
+#linhasAqpEvasao{
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+}
+#barrasCdmEvasao{
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+}
+#linhasCdmEvasao{
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+}
+#curve_chartAqpJedi {
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+  
+}
+#curve_chartCdmJedi{
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+}
+#curve_chartLmJedi{
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+}
 .icone{
     width: 16px;
     height: 16px;
@@ -46,6 +92,11 @@ nav{
     height: 50%;
     text-align: center;
     background-color: rgb(240, 233, 233);
+}
+.bnts {
+    display: inline;
+    float: left;
+    
 }
 /* Dropdown Button */
 .dropbtn {
@@ -170,7 +221,7 @@ div.scrollmenu a {
     text-align: center;
     padding: 14px;
     text-decoration: none;
-    margin-left: 165px;
+    margin-left: 250px;
 }
 
 div.scrollmenu a:hover {

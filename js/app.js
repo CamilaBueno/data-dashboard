@@ -1,4 +1,80 @@
 
+
+
+var total = data.AQP["2016-2"].students.length;
+ console.log(total);
+ function mostraAtiva(){
+  
+  var actives = [];
+  for(var i = 0; i< data.AQP["2016-2"].students.length; i++){
+  actives.push(data.AQP["2016-2"].students[i].active);
+  }
+  return actives;
+}
+var total = data.AQP["2017-1"].students.length;
+console.log(total);
+function mostraAtiva(){
+ 
+ var actives = [];
+ for(var i = 0; i< data.AQP["2017-1"].students.length; i++){
+ actives.push(data.AQP["2017-1"].students[i].active);
+ }
+ return actives;
+}
+var total = data.CDM["2017-1"].students.length;
+console.log(total);
+function mostraAtiva(){
+ 
+ var actives = [];
+ for(var i = 0; i< data.CDM["2017-2"].students.length; i++){
+ actives.push(data.CDM["2017-2"].students[i].active);
+ }
+ return actives;
+}
+var total = data.CDM["2017-2"].students.length;
+console.log(total);
+function mostraAtiva(){
+ 
+ var actives = [];
+ for(var i = 0; i< data.CDM["2017-2"].students.length; i++){
+ actives.push(data.CDM["2017-2"].students[i].active);
+ }
+ return actives;
+}
+var total = data.LIM["2016-2"].students.length;
+ console.log(total);
+ function mostraAtiva(){
+  
+  var actives = [];
+  for(var i = 0; i< data.LIM["2016-2"].students.length; i++){
+  actives.push(data.LIM["2016-2"].students[i].active);
+  }
+  return actives;
+}
+var total = data.LIM["2017-1"].students.length;
+console.log(total);
+function mostraAtiva(){
+ 
+ var actives = [];
+ for(var i = 0; i< data.LIM["2017-1"].students.length; i++){
+ actives.push(data.LIM["2017-1"].students[i].active);
+ }
+ return actives;
+}
+var total = data.LIM["2017-2"].students.length;
+console.log(total);
+function mostraAtiva(){
+ 
+ var actives = [];
+ for(var i = 0; i< data.LIM["2017-2"].students.length; i++){
+ actives.push(data.LIM["2017-2"].students[i].active);
+ }
+ return actives;
+}
+ 
+ 
+ 
+ 
  var total = data.SCL["2016-2"].students.length;
  console.log(total);
  function mostraAtiva(){
@@ -6,11 +82,31 @@
   var actives = [];
   for(var i = 0; i< data.SCL["2016-2"].students.length; i++){
   actives.push(data.SCL["2016-2"].students[i].active);
- 
+  }
+  return actives;
+}
+var total = data.SCL["2017-1"].students.length;
+ console.log(total);
+ function mostraAtiva(){
+  
+  var actives = [];
+  for(var i = 0; i< data.SCL["2017-1"].students.length; i++){
+  actives.push(data.SCL["2017-1"].students[i].active);
+  }
+  return actives;
+}
+var total = data.SCL["2017-2"].students.length;
+ console.log(total);
+ function mostraAtiva(){
+  
+  var actives = [];
+  for(var i = 0; i< data.SCL["2017-2"].students.length; i++){
+  actives.push(data.SCL["2017-2"].students[i].active);
   }
   return actives;
 }
  console.log(mostraAtiva());
+
  function mostraInativa(total, actives){
   var inatives = total - actives;
   return inatives;
@@ -57,6 +153,20 @@ return porcentagenJedi;
     
       for(var i = 0; i < data.AQP['2016-2'].nps.promoters.length; i++){
         mediaNps.push(data.AQP['2016-2'].nps[i].promoters);
+    
+      }
+      var somaNps = mediaNps.reduce(function(acumulator, valorAtual){
+        return acumulator + valorAtual;
+      });
+    var resultMediaNps = somaNps * 100;
+    var porcentagenNps = Math.round(resultMediaNps * 100)/ 5;
+    return porcentagenNps;
+     }
+     function calculaMediaNps(){
+      var mediaNps = [];
+    
+      for(var i = 0; i < data.SCL['2016-2'].nps.promoters.length; i++){
+        mediaNps.push(data.SCL['2016-2'].nps[i].promoters);
     
       }
       var somaNps = mediaNps.reduce(function(acumulator, valorAtual){

@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Sede', 'NPS'], ['LIM 2016-2/Sprint 1', 82],
+          ['LIM 2016-2/Sprint 2', 76],
+          ['LIM 2017-1/Sprint 1', 58],
+          ['LIM 2017-1/Sprint 2', 64],
+          ['LIM 2017-1/Sprint 3', 64],
+          ['LIM 2017-1/Sprint 4', 45],
+          ['LIM 2017-2/Sprint 1', 88],
+          ['LIM 2017-2/Sprint 2', 58],
+]);
+        var options = {
+          title: 'Nps- Lima'
+        };
+        var chart = new google.visualization.PieChart(document.getElementById('piechartNpsL'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechartNpsL" style="width: 700px; height: 400px;"></div>
+  </body>
+</html>

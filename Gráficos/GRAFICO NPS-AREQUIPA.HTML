@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Sede', 'NPS'],
+        ['AQP 2016-2/Sprint 1',     55],
+         ['AQP 2016-2/Sprint 2', 58],
+          ['AQP 2016-2/Sprint 3', 65],
+          ['AQP 2016-2/Sprint 2', 63],
+          ['AQP 2017-1/Sprint 1', 94],
+          ['AQP 2017-1/Sprint 2', 64],
+          ['AQP 2017-1/Sprint 3', 72],
+
+        ]);
+
+        var options = {
+          title: 'Nps- Arequipa'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechartNpsA'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechartNpsA" style="width: 700px; height: 400px;"></div>
+  </body>
+</html>

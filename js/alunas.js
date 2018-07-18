@@ -63,8 +63,9 @@ if(turma === 'none') {
     var geração = document.createElement('img');
     geração.src = data[sede][turma]['students'][i]['photo'];
     listaProgramadoras.appendChild(geração);
+    
   }
 }
-    
+ 
 }
 

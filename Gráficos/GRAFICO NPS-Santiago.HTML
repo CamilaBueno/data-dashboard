@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Sede', 'NPS'], ['LIM 2016-2/Sprint 1', 82],
+          ['SLC 2016-2/Sprint 1', 71],
+          ['SLC 2016-2/Sprint 2', 94],
+          ['SLC 2016-2/Sprint 3', 65],
+          ['SLC 2016-2/Sprint 4', 79],
+          ['SLC 2017-1/Sprint 1',  64],
+          ['SLC 2017-1/Sprint 2' , 89],
+          ['SLC 2017-1/Sprint 3' , 90],
+          ['SLC 2017-2/Sprint 1' , 64],
+          ['SLC 2017-2/Sprint 2' , 91],
+]);
+        var options = {
+          title: 'Nps- Santiago do Chile'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechartNpsS'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechartNpsS" style="width: 700px; height: 400px;"></div>
+  </body>
+</html>

@@ -1,10 +1,15 @@
+<!DOCTYPE html>
 <html>
+    <head class="head">
+<meta charset="utf-8">
 <title>Data Dashboard</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
    crossorigin="anonymous">
    <link rel="icon" href="assets/images/iconelaboratoria.jpg" class="icone">
-    <div class="header" >
+   </head>
+   <body>
+   <div class="header" >
     <header id="logo" >
         
        
@@ -13,7 +18,7 @@
       </div>
     </header>
     <div class="scrollmenu">
-      <a href="geral.html">Geral</a>
+      <a>Geral</a>
 
       <a href="alunas.html">Alunas</a>
       <a href="jedis.html">Professores e Jedis</a>
@@ -27,7 +32,38 @@
       <p><button>Editar Informações</button></p>
     </div>
 <div id="alunasAtivas"> 
-    <h2>Número de alunas ativas e desistentes por sede </h2>
+  <body>
+
+      <h2 class="media">Número de alunas ativas e desistentes por sede </h2>
+      <h2 class="media">Sede - Arequipa</h2>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Período', 'Ativas', 'Inativas'],
+          ['2017-1',  7,     8],
+          ['2017-2',  8,     7],
+          
+        ]);
+      
+        var options = {
+          title: 'Evasão-Arequipa',
+          vAxis: {title: 'Período',  titleTextStyle: {color: 'red'}}//legenda vertical
+        };
+      
+        var barras = new google.visualization.BarChart(document.getElementById('barrasAqpEvasao'));
+        barras.draw(data, options);
+        
+      }
+    </script>
+  </head>
+  <body>
+    <div id="barrasAqpEvasao" style="width: 700px; height: 400px;"></div>
+    <div id="linhasAqpEvasao" style="width: 700px; height: 400px;"></div>
+  </body>
+    <h2 class="media">Sede - Cidade do México</h2>
    <div>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -46,18 +82,20 @@
           vAxis: {title: 'Período',  titleTextStyle: {color: 'red'}}//legenda vertical
         };
        
-        var barras = new google.visualization.BarChart(document.getElementById('barrasCdm'));
+        var barras = new google.visualization.BarChart(document.getElementById('barrasCdmEvasao'));
         barras.draw(data, options);
         
       }
     </script>
-  
+  </body>
   <body>
-    <div id="barrasCdm" style="width: 900px; height: 500px;"></div>
-    <div id="linhasCdm" style="width: 900px; height: 500px;"></div>
+    <div id="barrasCdmEvasao" style="width: 700px; height: 400px;"></div>
+    <div id="linhasCdmEvasao" style="width: 700px; height: 400px;"></div>
   </body>
 </div>
+<h2 class="media">Sede - Lima</h2>
 <div>
+  <body>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
@@ -70,24 +108,22 @@
           ['2017-2',   6,     8],
           
         ]);0,1
-
-        
-
         var options = {
           title: 'Evasão-Lima',
-          vAxis: {title: 'Período',  titleTextStyle: {color: 'red'}}//legenda vertical
+          vAxis: {title: 'Período',  titleTextStyle: {color: 'hollywood cerise' }}//legenda vertical
         };
-       
-        var barras = new google.visualization.BarChart(document.getElementById('barrasLima'));
+        var barras = new google.visualization.BarChart(document.getElementById('barrasLimaEvasao'));
         barras.draw(data, options);
-        
       }
     </script>
+     </body>
   <body>
-    <div id="barrasLima" style="width: 900px; height: 500px;"></div>
-    <div id="linhasLima" style="width: 900px; height: 500px;"></div>
+    <div id="barrasLimaEvasao" style="width: 700px; height: 400px;"></div>
+    <div id="linhasLimaEvasao" style="width: 700px; height: 400px;"></div>
   </body>
 </div>
+<body>
+<h2 class="media">Sede - Santiago do Chile</h2>
 <div>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -98,22 +134,141 @@
           ['Período', 'Ativas', 'Inativas'],
           ['2016-2',  7,     8],
           ['2017-1',  14,    9],
-          ['2017-2',  26,    33],
-          
+          ['2017-2',  26,    33], 
         ]);
-       
         var options = {
           title: 'Evasão-Santiago do Chile',
           vAxis: {title: 'Período',  titleTextStyle: {color: 'red'}}//legenda vertical
         };
-        var barras = new google.visualization.BarChart(document.getElementById('barrasSdc'));
+        var barras = new google.visualization.BarChart(document.getElementById('barrasSdcEvasao'));
         barras.draw(data, options); 
       }
     </script>
+    </body>
   <body>
-    <div id="barrasSdc" style="width: 900px; height: 500px;"></div>
-    <div id="linhasSdc" style="width: 900px; height: 500px;"></div>
+    <div id="barrasSdcEvasao" style="width: 700px; height: 400px;"></div>
+    <div id="linhasSdcEvasao" style="width: 700px; height: 400px;"></div>
 </div>
+<body>
+<h2 class="media">NPS - Arequipa</h2>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Sede', 'NPS'],
+    ['AQP 2016-2/Sprint 1',     55],
+     ['AQP 2016-2/Sprint 2', 58],
+      ['AQP 2016-2/Sprint 3', 65],
+      ['AQP 2016-2/Sprint 2', 63],
+      ['AQP 2017-1/Sprint 1', 94],
+      ['AQP 2017-1/Sprint 2', 64],
+      ['AQP 2017-1/Sprint 3', 72],
+    ]);
+    var options = {
+      title: 'Nps- Arequipa'
+    };
+    var chart = new google.visualization.PieChart(document.getElementById('piechartNpsA'));
+
+    chart.draw(data, options);
+  }
+</script>
+</body>
+<body>
+<div id="piechartNpsA" style="width: 700px; height: 400px;"></div>
+</body>
+<body>
+<h2 class="media">NPS - Cidade do México</h2>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Sede', 'NPS'],
+      ['CDM 2017-1/Sprint 1', 83],
+      ['CDM 2017-1/Sprint 2', 54],
+      ['CDM 2017-1/Sprint 3', 68],
+      ['CDM 2017-2/Sprint 1', 79],
+      ['CDM 2017-2/Sprint 2', 94], 
+]);
+    var options = {
+      title: 'Nps- Cidade do México'
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechartNpsM'));
+
+    chart.draw(data, options);
+  }
+</script>
+<body>
+<div id="piechartNpsM" style="width: 700px; height: 400px;"></div>
+</body>
+</body>
+<body>
+<h2 class="media">NPS - Lima</h2>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Sede', 'NPS'], ['LIM 2016-2/Sprint 1', 82],
+      ['LIM 2016-2/Sprint 2', 76],
+      ['LIM 2017-1/Sprint 1', 58],
+      ['LIM 2017-1/Sprint 2', 64],
+      ['LIM 2017-1/Sprint 3', 64],
+      ['LIM 2017-1/Sprint 4', 45],
+      ['LIM 2017-2/Sprint 1', 88],
+      ['LIM 2017-2/Sprint 2', 58],
+]);
+    var options = {
+      title: 'Nps- Lima'
+    };
+    var chart = new google.visualization.PieChart(document.getElementById('piechartNpsL'));
+    chart.draw(data, options);
+  }
+</script>
+
+<body>
+<div id="piechartNpsL" style="width: 700px; height: 400px;"></div>
+</body>
+<h2 class="media">NPS - Santiago do Chile</h2>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+
+    var data = google.visualization.arrayToDataTable([
+      ['Sede', 'NPS'], ['LIM 2016-2/Sprint 1', 82],
+      ['SLC 2016-2/Sprint 1', 71],
+      ['SLC 2016-2/Sprint 2', 94],
+      ['SLC 2016-2/Sprint 3', 65],
+      ['SLC 2016-2/Sprint 4', 79],
+      ['SLC 2017-1/Sprint 1',  64],
+      ['SLC 2017-1/Sprint 2' , 89],
+      ['SLC 2017-1/Sprint 3' , 90],
+      ['SLC 2017-2/Sprint 1' , 64],
+      ['SLC 2017-2/Sprint 2' , 91],
+]);
+    var options = {
+      title: 'Nps- Santiago do Chile'
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechartNpsS'));
+
+    chart.draw(data, options);
+  }
+</script>
+
+<body>
+<div id="piechartNpsS" style="width: 700px; height: 400px;"></div>
+</body>
+</body>
+</body> 
 </html>
  
 <footer>     
