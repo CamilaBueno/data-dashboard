@@ -42,6 +42,9 @@ h2{
 }
 
 
+div.scrollmenu a:hover {
+    background-color: #777;
+}
 footer {
 	
 	text-align: center;
@@ -61,8 +64,7 @@ footer ul li {
 	
 }
 footer li {
-    text-decoration: none;
-    color: black;
+	text-decoration: none;
 	display: block;
     border-collapse: separate;
     width: 65px;
